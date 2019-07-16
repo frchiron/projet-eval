@@ -12,8 +12,8 @@ L'ensemble du projet du être fourni sous forme de zip. Il n'est pas utile de fo
 
 - Créer une application Spring Boot
 - L'application doit disposer d'un contrôleur REST avec les points d'entrée suivants :
-  - GET /book?title=<monTitre> 
-      => lecture de l'enregistrement Book avec comme title = <monTitre>
+  - `GET /book?title=<monTitre>` 
+      => lecture de l'enregistrement Book avec comme title = `<monTitre>`
       Exemple 
   ```
   GET /book?title=Faber
@@ -25,7 +25,8 @@ L'ensemble du projet du être fourni sous forme de zip. Il n'est pas utile de fo
      'year' : '2013'
   }
   ```
-  - GET /book
+  - `GET /book`
+
       => lecture de l'ensemble des enregistrements Book
   
       Exemple 
@@ -43,7 +44,7 @@ L'ensemble du projet du être fourni sous forme de zip. Il n'est pas utile de fo
   ```
   
   
-  - POST /book
+  - `POST /book`
  
       => création d'un enregistrement Book avec les champs suivants : title (chaîne de caractères sans espace), author (chaîne de caractères sans espace), year (date au format <YYYY>)
  
