@@ -14,6 +14,7 @@ L'ensemble du projet du être fourni sous forme de zip. Il n'est pas utile de fo
 - L'application doit disposer d'un contrôleur REST avec les points d'entrée suivants :
   - `GET /book?title=<monTitre>` 
       => lecture de l'enregistrement Book avec comme title = `<monTitre>`
+      
       Exemple 
   ```
   GET /book?title=Faber
