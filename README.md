@@ -8,9 +8,10 @@ Un README.md doit être fourni, il doit indiquer :
 - des exemples pour tester l'application
 - les choix éventuels d'implémentation si besoin
 
-L'ensemble du projet du être fourni sous forme de zip. Il n'est pas utile de fournir le répertoire /target.
+L'ensemble du projet doit être fourni sous forme de zip. Il n'est pas utile de fournir le répertoire /target.
 
-- Créer une application Spring Boot avec les starters Web et data-jpa 
+- Créer une application Spring Boot avec les starters Web et data-jpa. S'appuyer sur le site https://start.spring.io/ pour générer votre squelette de projet Maven 
+
 - L'application doit disposer d'un contrôleur REST avec les points d'entrée suivants :
   - `GET /book?title=<monTitre>` 
       => lecture de l'enregistrement Book avec comme title = `<monTitre>`
@@ -73,6 +74,12 @@ L'ensemble du projet du être fourni sous forme de zip. Il n'est pas utile de fo
 
 NOTES : 
 - pour des raisons de simplicité on prendra l'hypothèse que les champs des enregistrements ne contiennent pas d'espace. En particulier un author sera désigné par un nom sans espace
+- Help pour éviter de mettre en place JPA dès le début : on peut dans un 1er temps créer dans le Controller une liste de Book :
+```
+    private List<Book> books = Arrays.asList(new Book(....),new Book(..));
+
+```
+
 - la réalisation du point d'entrée POST /book, plus complexe, doit s'effectuer dans un 2nd temps. Dans un 1er temps, pour valider le bon fonctionnement des points d'entrée GET, on peut créer temporairement un point d'entrée `GET /bookexample` qui génère des enregistrements Book
  - Help pour la création du POST :
  
