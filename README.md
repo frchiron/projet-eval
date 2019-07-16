@@ -86,7 +86,7 @@ NOTES :
 
 ```
 
-- la réalisation du point d'entrée POST /book, plus complexe, doit s'effectuer dans un 2nd temps. Dans un 1er temps, pour valider le bon fonctionnement des points d'entrée GET, on peut créer temporairement un point d'entrée `GET /bookexample` qui génère des enregistrements Book
+- la réalisation du point d'entrée POST /book, plus complexe, pourra s'effectuer dans un 2nd temps. Dans un 1er temps, pour valider le bon fonctionnement des points d'entrée GET, on peut créer temporairement un point d'entrée `GET /bookexample` qui génère des enregistrements Book
  - Help pour la création du POST :
  
  ```
