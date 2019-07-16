@@ -31,15 +31,15 @@ L'ensemble du projet du être fourni sous forme de zip. Il n'est pas utile de fo
       Exemple 
   ```
   GET /book
-  =>
- [ {
-     'id' : '1',
-     'title' : 'Faber',
-     'author' : 'Garcia',
-     'year' : '2013'
-  },
-  ...
-  ]
+    =>
+    [ {
+        'id' : '1',
+        'title' : 'Faber',
+        'author' : 'Garcia',
+        'year' : '2013'
+    },
+    ...
+    ]
   ```
   
   
@@ -61,4 +61,6 @@ L'ensemble du projet du être fourni sous forme de zip. Il n'est pas utile de fo
 - L'application doit stocker l'ensemble des enregistrements dans une base de données H2 embarquée, via Spring JPA  
 
 
-NOTE : pour des raisons de simplicité on prendra l'hypothèse que les champs des enregistrements ne contiennent pas d'espace. En particulier un author sera désigné par un nom sans espace
+NOTES : 
+- pour des raisons de simplicité on prendra l'hypothèse que les champs des enregistrements ne contiennent pas d'espace. En particulier un author sera désigné par un nom sans espace
+- la réalisation du point d'entrée POST /book, plus complexe, doit s'effectuer dans un 2nd temps. Dans un 1er temps, pour valider le bon fonctionnement des points d'entrée GET, en créant temporairement un point d'entrée `GET /bookexample` qui génère des enregistrements Book
