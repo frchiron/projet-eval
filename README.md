@@ -60,9 +60,27 @@ L'ensemble du projet du être fourni sous forme de zip. Il n'est pas utile de fo
    2  
  ```
  
-- L'application doit stocker l'ensemble des enregistrements dans une base de données H2 embarquée, via Spring JPA  
+- L'application doit stocker l'ensemble des enregistrements dans une base de données H2 embarquée, via Spring JPA. Pour rappel il faut rajouter la dépendance h2 pour utiliser cette base :
+
+```
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+```
 
 
 NOTES : 
 - pour des raisons de simplicité on prendra l'hypothèse que les champs des enregistrements ne contiennent pas d'espace. En particulier un author sera désigné par un nom sans espace
-- la réalisation du point d'entrée POST /book, plus complexe, doit s'effectuer dans un 2nd temps. Dans un 1er temps, pour valider le bon fonctionnement des points d'entrée GET, en créant temporairement un point d'entrée `GET /bookexample` qui génère des enregistrements Book
+- la réalisation du point d'entrée POST /book, plus complexe, doit s'effectuer dans un 2nd temps. Dans un 1er temps, pour valider le bon fonctionnement des points d'entrée GET, on peut créer temporairement un point d'entrée `GET /bookexample` qui génère des enregistrements Book
+ - Help pour la création du POST :
+ 
+ ```
+     @PostMapping("/response")
+    @ResponseBody
+    public Long Book createBook(
+      @RequestBody Book book) {
+        // TODO
+     }
+``` 
