@@ -41,6 +41,12 @@ L'ensemble du projet doit être fourni sous forme de zip. Il n'est pas utile de 
         'author' : 'Garcia',
         'year' : '2013'
     },
+    {
+        'id' : '2',
+        'title' : 'Mon titre',
+        'author' : 'mon auteur',
+        'year' : '2019'
+    }
     ...
     ]
   ```
