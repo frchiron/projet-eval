@@ -10,7 +10,7 @@ Un README.md doit être fourni, il doit indiquer :
 
 L'ensemble du projet du être fourni sous forme de zip. Il n'est pas utile de fournir le répertoire /target.
 
-- Créer une application Spring Boot
+- Créer une application Spring Boot avec les starters Web et data-jpa 
 - L'application doit disposer d'un contrôleur REST avec les points d'entrée suivants :
   - `GET /book?title=<monTitre>` 
       => lecture de l'enregistrement Book avec comme title = `<monTitre>`
