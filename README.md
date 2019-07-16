@@ -90,7 +90,7 @@ NOTES :
  - Help pour la création du POST :
  
  ```
-     @PostMapping("/response")
+     @PostMapping("/....")
     @ResponseBody
     public Long Book createBook(
       @RequestBody Book book) {
